@@ -1,0 +1,14 @@
+.Name_card_column {
+  
+  border: 2px solid rgb(176, 176, 177);
+  width: 30%;
+  height: 100vh;
+  }
+    
+    /* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
