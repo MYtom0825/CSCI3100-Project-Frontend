@@ -9,7 +9,7 @@ import "./Matching.css";
 
 //import Component
 import Name_card from './Name_card'
-import Chat from './Chat_Component/Chating'
+
 
 class Matching3 extends React.Component{
     render(){

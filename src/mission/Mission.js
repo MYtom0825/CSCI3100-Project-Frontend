@@ -2,8 +2,8 @@ import React, {useState, Component} from 'react';
 import "./Mission.css";
 
 //import Component
-import Calendar from 'react-calendar';
-import'react-calendar/dist/Calendar.css';
+import Calendar from '../react-calendar';
+import'../react-calendar/dist/Calendar.css';
 import Mission_card from './Mission_card';
 //<Calendar locale="en-US"/>
 class Mission extends React.Component{

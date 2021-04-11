@@ -50,7 +50,7 @@ const App = () => {
         
         {toProfile ? <Profile user={users}/>:''}
 
-        {tomission ?  <ProfileRegisterForm user={users}/> :''}
+        {tomission ?  /*<ProfileRegisterForm user={users}*/ <Mission/> :''}
        
       </div>
       

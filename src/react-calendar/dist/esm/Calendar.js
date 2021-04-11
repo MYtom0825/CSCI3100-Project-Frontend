@@ -1,3 +1,15 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import mergeClassNames from 'merge-class-names';
+import Navigation from './Calendar/Navigation';
+import CenturyView from './CenturyView';
+import DecadeView from './DecadeView';
+import YearView from './YearView';
+import MonthView from './MonthView';
+import { getBegin, getBeginNext, getEnd, getValueRange } from './shared/dates';
+import { isCalendarType, isClassName, isMaxDate, isMinDate, isRef, isValue, isView } from './shared/propTypes';
+import { between } from './shared/utils';
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -44,17 +56,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import mergeClassNames from 'merge-class-names';
-import Navigation from './Calendar/Navigation';
-import CenturyView from './CenturyView';
-import DecadeView from './DecadeView';
-import YearView from './YearView';
-import MonthView from './MonthView';
-import { getBegin, getBeginNext, getEnd, getValueRange } from './shared/dates';
-import { isCalendarType, isClassName, isMaxDate, isMinDate, isRef, isValue, isView } from './shared/propTypes';
-import { between } from './shared/utils';
+
 var defaultMinDate = new Date();
 defaultMinDate.setFullYear(1, 0, 1);
 defaultMinDate.setHours(0, 0, 0, 0);
