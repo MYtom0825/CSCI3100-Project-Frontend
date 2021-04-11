@@ -17,14 +17,25 @@ const App = () => {
 
   const [tomission, setgomission] = useState(false)
   const [toProfile, setgoProfile] = useState(false)
+  const [toProfileForm, setgoProfileForm] = useState(false)
+
+  const ProfileFormGet = () =>{
+    setgoProfileForm((toProfileForm) => toProfileForm=true);
+    setgomission((tomission) => tomission=false);
+    setgoProfile((toProfile)=> toProfile=false);
+    console.log("mission");
+    
+  };
 
   const MissionGet = () =>{
+    setgoProfileForm((toProfileForm) => toProfileForm=false);
     setgomission((tomission) => tomission=true);
     setgoProfile((toProfile)=> toProfile=false);
     console.log("mission");
     
   };
   const ProfileGet = () =>{
+    setgoProfileForm((toProfileForm) => toProfileForm=false);
     setgoProfile((toProfile)=> toProfile=true);
     setgomission((tomission)=>tomission=false)
     console.log("haha");
@@ -42,12 +53,12 @@ const App = () => {
   return(
     <div className="app">
       <div>
-        <Menu toProf={ProfileGet} tomission={MissionGet}/>
+        <Menu toProf={ProfileGet} tomission={MissionGet} toProfileForm={ProfileFormGet}/>
         
       </div>
       <div className="body">
         <div><TokenBlock  /></div>
-        
+        {toProfileForm ? <ProfileRegisterForm user={users}/>:''}
         {toProfile ? <Profile user={users}/>:''}
 
         {tomission ?  /*<ProfileRegisterForm user={users}*/ <Mission/> :''}

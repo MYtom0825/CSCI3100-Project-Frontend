@@ -10,7 +10,7 @@ class Mission extends React.Component{
     
     render(){
         const mission_list = [
-                        {Name:"Create Ice-breaking Quiz", Content:"Think of some question for the Ice breaking quiz!",Link:"./home.html" },
+                        {Name:"Create Ice-breaking Quiz", Content:"Think of some question for the Ice breaking quiz!",Link:"../website.html" },
                         {Name:"Hello", Content:"You are welcome", Link:"http://fb.com"},
                        ];
         return(

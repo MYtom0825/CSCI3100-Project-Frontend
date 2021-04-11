@@ -1,5 +1,6 @@
 import React, {Component, useState} from 'react';
 import "./Profile.css";
+import ProfileRegisterForm from "../ProfileRegistrationForm/ProfileRegisterForm"
 
 import ProfileDetail from './profileDetail';
 
@@ -30,7 +31,10 @@ class profile extends React.Component{
                                     int={user.interest} />
                 ))}
             </div>
-            <input type="submit" value="Edit" id="Submit" ></input>
+            <div className="ProfileRegisterForm_row">
+            <input type="submit" value="Edit" id="Submit" onClick={<ProfileRegisterForm />} ></input>
+               </div>
+            
         </nav>
         )
     }
