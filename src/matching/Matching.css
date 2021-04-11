@@ -1,0 +1,33 @@
+.Name_card_column {
+  
+  border: 2px solid rgb(176, 176, 177);
+  width: 30%;
+  height: 100vh;
+  }
+    
+    /* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.chating_container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.namecard_container {
+  padding: 5%;
+  border: 2px solid rgb(176, 176, 177);
+  grid-column-start: 1;
+  grid-column-end: 2;
+  min-height: 100vh;
+}
+
+.chatbox_container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  min-height: 80vh;
+}
